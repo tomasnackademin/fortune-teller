@@ -7,10 +7,25 @@ public class MagicNumbers {
     private String location;
     private int age;
     private int height;
+    
+    private int charCounter(String word, char letter){
+        int count = 0;
+        for(int i=0; i < word.length(); i++){
+            if(word.charAt(i) == letter){ 
+                count = count + 1;
+            }    
+        }
+        return count;
+    }
 
     public int calculateA() {
-        //TODO: calculate A
-        return 0;
+        int a = 0;
+        a = charCounter(name, ' ') + 1;
+        a = a + age;
+        while(a < 10){
+            a = a - 7;
+        }
+        return a;
     }
 
     public int calculateB() {
