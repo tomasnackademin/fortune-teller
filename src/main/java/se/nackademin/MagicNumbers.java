@@ -22,30 +22,57 @@ public class MagicNumbers {
         int a = 0;
         a = charCounter(name, ' ') + 1;
         a = a + age;
-        while(a < 10){
+        while(a > 10){
             a = a - 7;
         }
         return a;
     }
 
     public int calculateB() {
-        //TODO: calculate B
-        return 0;
+        int b = location.length();
+        b = b + income;
+        while(b > 10){
+            b = b - 7;
+        }
+        return b;
     }
 
     public int calculateC() {
-        //TODO: calculate C
-        return 0;
+        int c = 0;
+        c = calculateA() + calculateB() - height; 
+        while(c < 0){
+            c = c + 10;
+        }
+        return c;
     }
 
     public int calculateD() {
-        //TODO: calculate D
-        return 0;
+        int d = 0;
+        d = calculateA();
+        if(d > 5){
+            d = d + calculateB();
+        }
+        if(d <= 5){
+            d = d + calculateC();
+        }
+        d = d - income;
+        while(d < 0){
+            d = d + 10;        
+        }
+        return d;
     }
 
     public int calculateE() {
-        //TODO: calculate E
-        return 0;
+        double e = 0;
+        e = age * income;
+        e = e * income;
+        e = e * height;
+        e = Math.sqrt(e);
+        while(e > 10){
+            e = e / 2;
+        }
+        e = Math.round(e);
+        return e;
     }
 
     public void setName(String name) {
