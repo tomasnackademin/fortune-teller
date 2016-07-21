@@ -17,7 +17,7 @@ public class WordList {
 }
 public class Translator {
     String fortune_text = "";
-    int a = calculateA();
+    String abcde = calculate();
     String stringA = wordList(a);
     int b = calculateB();
     String stringB = wordList(b);

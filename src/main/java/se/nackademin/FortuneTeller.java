@@ -16,11 +16,6 @@ public class FortuneTeller {
      * @return A scientifically proven fortune
      *
      */
-    public String calculate() {
-        //TODO: Implement
-        return "Not implemented!";
-    }
-
     public static void main(String[] args) {
         new FortuneTeller();
     }
@@ -28,11 +23,10 @@ public class FortuneTeller {
     FortuneTeller() {
         fortuneTellerGui = new FortuneTellerGui(this);
         magicNumbers = new MagicNumbers();
-
+        public String fortuneString = magicNumbers.calculate();
     }
 
     public boolean setName(String name) {
-
         magicNumbers.setName(name);
         return name != null;
     }

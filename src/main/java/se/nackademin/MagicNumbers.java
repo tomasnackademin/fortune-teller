@@ -17,10 +17,17 @@ public class MagicNumbers {
         }
         return count;
     }
-
+    public int[] calculate() {
+        int[5] abcde = {0, 0, 0, 0, 0};
+        int abcde[0] = calculateA();
+        int abcde[1] = calculateB();
+        int abcde[2] = calculateC();
+        int abcde[3] = calculateD();
+        int abcde[4] = calculateE();
+        return abcde;
+    }
     public int calculateA() {
-        int a = 0;
-        a = charCounter(name, ' ') + 1;
+        int a = charCounter(name, ' ') + 1;
         a = a + age;
         while(a > 10){
             a = a - 7;
@@ -38,8 +45,7 @@ public class MagicNumbers {
     }
 
     public int calculateC() {
-        int c = 0;
-        c = calculateA() + calculateB() - height; 
+        int c = calculateA() + calculateB() - height; 
         while(c < 0){
             c = c + 10;
         }
@@ -47,8 +53,7 @@ public class MagicNumbers {
     }
 
     public int calculateD() {
-        int d = 0;
-        d = calculateA();
+        int d = calculateA();
         if(d > 5){
             d = d + calculateB();
         }
@@ -63,8 +68,7 @@ public class MagicNumbers {
     }
 
     public int calculateE() {
-        double e = 0;
-        e = age * income;
+        double e = age * income;
         e = e * income;
         e = e * height;
         e = Math.sqrt(e);
