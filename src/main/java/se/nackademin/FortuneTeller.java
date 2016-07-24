@@ -23,7 +23,7 @@ public class FortuneTeller {
     FortuneTeller() {
         fortuneTellerGui = new FortuneTellerGui(this);
         magicNumbers = new MagicNumbers();
-        public String fortuneString = magicNumbers.calculate();
+        translator = new Translator();
     }
 
     public boolean setName(String name) {

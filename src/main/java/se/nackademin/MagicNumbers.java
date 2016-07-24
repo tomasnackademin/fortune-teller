@@ -18,12 +18,13 @@ public class MagicNumbers {
         return count;
     }
     public int[] calculate() {
-        int[5] abcde = {0, 0, 0, 0, 0};
-        int abcde[0] = calculateA();
-        int abcde[1] = calculateB();
-        int abcde[2] = calculateC();
-        int abcde[3] = calculateD();
-        int abcde[4] = calculateE();
+        int[] abcde;
+        abcde = new int[5];
+        abcde[0] = calculateA();
+        abcde[1] = calculateB();
+        abcde[2] = calculateC();
+        abcde[3] = calculateD();
+        abcde[4] = calculateE();
         return abcde;
     }
     public int calculateA() {
