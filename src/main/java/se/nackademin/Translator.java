@@ -9,28 +9,30 @@ package se.nackademin;
  *
  * @author tomas
  */
-class WordList {
+
+public class Translator {
     String[] adjective = {"stor", "liten", "stark", "svag", "mjuk", "hård", "snabb", "vacker", "ljus", "mörk"};
     String[] noun = {"en lönehöjning", "en lönesänkning", "en fotboja", "en katt", "en hund", "ett hus", "ett barn", "ett elstängsel", "en dator", "ett golv"};
     String[] verb = {"spring", "ljuga", "flyga", "se", "vara", "äta", "mäta", "gå", "röra", "resa"};
-    String[][] wordList = {adjective, noun, verb};
-}
-public class Translator {
-    int[] abcde = magicNumbers.calculate();
-    public String fortuneText;
-    fortuneText = translate(abcde);
-}
-public String translate(int []){
-    String[] word;
+    
+    int[] abcde = new int[5];
+    abcde = MagicNumbers.calculate();
+    String fortuneText;
+    fortuneText = translate(abcde[]);
+
+    public String translate(int[]){
+    String[] word = new String[5];
     word[0] = adjective[abcde[0]];
     word[1] = verb[abcde[1]];
     word[2] = noun[abcde[2]];
     word[3] = verb[abcde[3]];
     word[4] = adjective[abcde[4]];
     String fortune_text;
-    fortuneText = String.format("Din framtid är %d. Du borde sluta %d. " +
+    fortuneText = String.format("Din framtid är %s. Du borde sluta %s. " +
                                  "Vi ser att du snart kommer att skaffa " + 
-                                 "%d. Snart kommer du att vilja %d, men " +
-                                 "då är det viktigt att du är %d.", word[0], word[1], word[2], word[3], word[4]);
+                                 "%s. Snart kommer du att vilja %s, men " +
+                                 "då är det viktigt att du är %s.", word[0], word[1], word[2], word[3], word[4]);
     return fortuneText;
+    }
 }
+
