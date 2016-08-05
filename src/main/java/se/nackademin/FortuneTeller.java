@@ -24,6 +24,13 @@ public class FortuneTeller {
         fortuneTellerGui = new FortuneTellerGui(this);
         magicNumbers = new MagicNumbers();
         translator = new Translator();
+        int[] abcde = new int[5];
+        abcde = magicNumbers.calculate();
+        String fortuneText = translator.translate(abcde);
+    }
+    
+    public String calculate() {
+        return this.fortuneText;
     }
 
     public boolean setName(String name) {

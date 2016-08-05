@@ -28,8 +28,8 @@ public class MagicNumbers {
         return abcde;
     }
     public int calculateA() {
-        int a = charCounter(name, ' ') + 1;
-        a = a + age;
+        int a = charCounter(this.name, ' ') + 1;
+        a = a + this.age;
         while(a > 10){
             a = a - 7;
         }
@@ -37,8 +37,8 @@ public class MagicNumbers {
     }
 
     public int calculateB() {
-        int b = location.length();
-        b = b + income;
+        int b = this.location.length();
+        b = b + this.income;
         while(b > 10){
             b = b - 7;
         }
@@ -46,7 +46,7 @@ public class MagicNumbers {
     }
 
     public int calculateC() {
-        int c = calculateA() + calculateB() - height; 
+        int c = calculateA() + calculateB() - this.height; 
         while(c < 0){
             c = c + 10;
         }
@@ -61,7 +61,7 @@ public class MagicNumbers {
         if(d <= 5){
             d = d + calculateC();
         }
-        d = d - income;
+        d = d - this.income;
         while(d < 0){
             d = d + 10;        
         }
@@ -69,9 +69,9 @@ public class MagicNumbers {
     }
 
     public int calculateE() {
-        double e = age * income;
-        e = e * income;
-        e = e * height;
+        double e = this.age * this.income;
+        e = e * this.income;
+        e = e * this.height;
         e = Math.sqrt(e);
         while(e > 10){
             e = e / 2;
