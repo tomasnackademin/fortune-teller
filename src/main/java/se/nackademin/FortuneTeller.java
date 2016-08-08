@@ -6,6 +6,7 @@ public class FortuneTeller {
     MagicNumbers magicNumbers;
     FortuneTellerGui fortuneTellerGui;
     Translator translator;
+    String fortuneText;
     /*
      * Returns a fortune based on name, income, location, age and height
      *
@@ -26,7 +27,7 @@ public class FortuneTeller {
         translator = new Translator();
         int[] abcde = new int[5];
         abcde = magicNumbers.calculate();
-        String fortuneText = translator.translate(abcde);
+        fortuneText = translator.translate(abcde);
     }
     
     public String calculate() {

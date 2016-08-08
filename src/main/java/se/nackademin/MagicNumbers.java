@@ -77,7 +77,8 @@ public class MagicNumbers {
             e = e / 2;
         }
         e = Math.round(e);
-        return e;
+        int intE = (int) e;
+        return intE;
     }
 
     public void setName(String name) {
